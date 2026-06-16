@@ -44,13 +44,10 @@ export default function Hero() {
             marginBottom: 40,
           }}
         >
-          Desenvolvedor backend Python. Construo APIs REST com{" "}
+          Desenvolvedor Backend. | Python | PostgreSQL | Docker. 
+          Construo APIs REST com{" "}
           <span style={{ color: "var(--text-primary)" }}>FastAPI</span> e{" "}
           <span style={{ color: "var(--text-primary)" }}>Django-Ninja</span>,
-          dados em{" "}
-          <span style={{ color: "var(--text-primary)" }}>PostgreSQL</span>,
-          tudo containerizado com{" "}
-          <span style={{ color: "var(--text-primary)" }}>Docker</span>.
         </p>
       </div>
 
