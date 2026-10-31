@@ -85,7 +85,7 @@ export default function Contact() {
                   background: "rgba(255,255,255,0.05)",
                   display: "flex",
                   alignItems: "center",
-                  justifyContext: "center",
+                  justifyContent: "center",
                   color: contact.color,
                   flexShrink: 0,
                 }}
