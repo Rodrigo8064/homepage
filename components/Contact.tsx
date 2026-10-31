@@ -43,7 +43,11 @@ export default function Contact() {
     >
       <div className="section-label">// contato</div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
+      {/* Alterado para usar classes utilitárias responsivas ou uma abordagem flex/grid segura */}
+      <div 
+        className="contact-grid-container"
+        style={{ display: "grid", gap: 64, alignItems: "start" }}
+      >
         <div>
           <h2
             style={{
@@ -81,7 +85,7 @@ export default function Contact() {
                   background: "rgba(255,255,255,0.05)",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
+                  justifyContext: "center",
                   color: contact.color,
                   flexShrink: 0,
                 }}

@@ -117,9 +117,10 @@ export default function Projects() {
               }}
             />
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 24, alignItems: "start" }}>
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
+            {/* Container responsivo usando flexbox em vez de grid fixo */}
+            <div className="project-card-content" style={{ display: "flex", justifyContent: "space-between", gap: 24, alignItems: "start" }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10, flexWrap: "wrap" }}>
                   <h3
                     style={{
                       fontFamily: "'Syne', sans-serif",
@@ -152,7 +153,6 @@ export default function Projects() {
                     color: "var(--text-secondary)",
                     lineHeight: 1.6,
                     marginBottom: 16,
-                    maxWidth: 500,
                   }}
                 >
                   {project.description}
@@ -166,7 +166,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 4, overflowX: "auto" }}>
                   {project.endpoints.map((ep, i) => (
                     <div key={i} className="endpoint-line">
                       <span className={methodColors[ep.method]} style={{ minWidth: 44, fontSize: 11, fontWeight: 500 }}>
@@ -178,7 +178,8 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, minWidth: 130 }}>
+              {/* Bloco de botões responsivo */}
+              <div className="project-actions" style={{ display: "flex", flexDirection: "column", gap: 8, flexShrink: 0 }}>
                 <a
                   href={project.docsPath}
                   target="_blank"
