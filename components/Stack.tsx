@@ -21,27 +21,22 @@ const levelStyle: Record<string, React.CSSProperties> = {
 
 export default function Stack() {
   return (
-    <section
-      id="stack"
-      style={{ padding: "80px 24px", maxWidth: 900, margin: "0 auto" }}
-    >
+    <section id="stack" className="section">
       <div className="section-label">// stack</div>
 
-      <h2
-        style={{
-          fontSize: 40,
-          fontWeight: 700,
-          letterSpacing: "-0.02em",
-          marginBottom: 16,
-          lineHeight: 1.15,
-        }}
-      >
+      <h2 className="section-title">
         Ferramentas &{" "}
         <span style={{ color: "var(--accent)" }}>tecnologias</span>
       </h2>
 
-      <p style={{ color: "var(--text-secondary)", marginBottom: 40, fontSize: 14 }}>
-        Foco em backend Python. Tudo que uso está em produção.
+      <p
+        style={{
+          color: "var(--text-secondary)",
+          marginBottom: 40,
+          fontSize: 14,
+        }}
+      >
+        Foco em backend Python. As ferramentas principais estão em produção.
       </p>
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
@@ -69,14 +64,7 @@ export default function Stack() {
         ))}
       </div>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: 12,
-          marginTop: 48,
-        }}
-      >
+      <div className="stack-grid">
         {[
           { label: "linguagem principal", value: "Python 3.11+" },
           { label: "frameworks", value: "FastAPI · Django-Ninja" },
@@ -85,15 +73,7 @@ export default function Stack() {
           { label: "versionamento", value: "Git · GitHub" },
           { label: "OS do servidor", value: "Ubuntu Linux" },
         ].map((item) => (
-          <div
-            key={item.label}
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              borderRadius: 10,
-              padding: "14px 16px",
-            }}
-          >
+          <div key={item.label} className="stack-item">
             <div
               style={{
                 fontSize: 10,
@@ -106,7 +86,13 @@ export default function Stack() {
             >
               {item.label}
             </div>
-            <div style={{ fontSize: 13, color: "var(--text-primary)", fontWeight: 500 }}>
+            <div
+              style={{
+                fontSize: 13,
+                color: "var(--text-primary)",
+                fontWeight: 500,
+              }}
+            >
               {item.value}
             </div>
           </div>

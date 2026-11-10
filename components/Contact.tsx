@@ -26,7 +26,14 @@ const contacts = [
     value: "rodrigooliveiradel@gmail.com",
     url: "mailto:rodrigooliveiradel@gmail.com",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+      >
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
         <polyline points="22,6 12,13 2,6" />
       </svg>
@@ -37,34 +44,24 @@ const contacts = [
 
 export default function Contact() {
   return (
-    <section
-      id="contato"
-      style={{ padding: "80px 24px 120px", maxWidth: 900, margin: "0 auto" }}
-    >
+    <section id="contato" className="section section-contact">
       <div className="section-label">// contato</div>
 
-      {/* Alterado para usar classes utilitárias responsivas ou uma abordagem flex/grid segura */}
-      <div 
-        className="contact-grid-container"
-        style={{ display: "grid", gap: 64, alignItems: "start" }}
-      >
+      <div className="contact-grid-container">
         <div>
-          <h2
+          <h2 className="section-title">
+            Vamos <span style={{ color: "var(--accent)" }}>conversar?</span>
+          </h2>
+          <p
             style={{
-              fontSize: 40,
-              fontWeight: 700,
-              letterSpacing: "-0.02em",
-              marginBottom: 16,
-              lineHeight: 1.15,
+              color: "var(--text-secondary)",
+              lineHeight: 1.7,
+              fontSize: 15,
             }}
           >
-            Vamos{" "}
-            <span style={{ color: "var(--accent)" }}>conversar?</span>
-          </h2>
-          <p style={{ color: "var(--text-secondary)", lineHeight: 1.7, fontSize: 15 }}>
-            Estou em busca de oportunidades como desenvolvedor backend.
-            Se você tem uma vaga ou quer trocar uma ideia sobre tecnologia,
-            pode me chamar por qualquer canal ao lado.
+            Estou em busca de oportunidades como desenvolvedor backend. Se você
+            tem uma vaga ou quer trocar uma ideia sobre tecnologia, pode me
+            chamar por qualquer canal ao lado.
           </p>
         </div>
 
@@ -93,7 +90,13 @@ export default function Contact() {
                 {contact.icon}
               </div>
               <div>
-                <div style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 2 }}>
+                <div
+                  style={{
+                    fontSize: 12,
+                    color: "var(--text-muted)",
+                    marginBottom: 2,
+                  }}
+                >
                   {contact.label}
                 </div>
                 <div style={{ fontSize: 13, color: "var(--text-primary)" }}>
@@ -101,7 +104,14 @@ export default function Contact() {
                 </div>
               </div>
               <div style={{ marginLeft: "auto", color: "var(--text-muted)" }}>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>

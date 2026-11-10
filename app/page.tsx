@@ -12,13 +12,13 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <div className="divider" style={{ maxWidth: 900, margin: "0 auto" }} />
+        <div className="divider" />
         <About />
-        <div className="divider" style={{ maxWidth: 900, margin: "0 auto" }} />
+        <div className="divider" />
         <Projects />
-        <div className="divider" style={{ maxWidth: 900, margin: "0 auto" }} />
+        <div className="divider" />
         <Stack />
-        <div className="divider" style={{ maxWidth: 900, margin: "0 auto" }} />
+        <div className="divider" />
         <Contact />
       </main>
       <Footer />

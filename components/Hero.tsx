@@ -1,16 +1,6 @@
 export default function Hero() {
   return (
-    <section
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        padding: "0 24px",
-        maxWidth: 900,
-        margin: "0 auto",
-      }}
-    >
+    <section className="hero">
       <div className="animate-fade-in-up delay-200">
         <h1
           style={{
@@ -38,20 +28,23 @@ export default function Hero() {
             marginBottom: 40,
           }}
         >
-          Desenvolvedor Backend. | Python | PostgreSQL | Docker. 
-          Construo APIs REST com{" "}
-          <span style={{ color: "var(--text-primary)" }}>FastAPI</span> e{" "}
-          <span style={{ color: "var(--text-primary)" }}>Django-Ninja</span>,
+          Desenvolvedor Backend. | Python | PostgreSQL | Docker. Construo APIs
+          REST com <span style={{ color: "var(--text-primary)" }}>FastAPI</span>{" "}
+          e <span style={{ color: "var(--text-primary)" }}>Django-Ninja</span>.
         </p>
       </div>
 
-      <div
-        className="animate-fade-in-up delay-400"
-        style={{ display: "flex", gap: 12, flexWrap: "wrap" }}
-      >
+      <div className="hero-actions animate-fade-in-up delay-400">
         <a href="#apis" className="btn-primary">
           Ver projetos
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M12 5v14M5 12l7 7 7-7" />
           </svg>
         </a>
@@ -60,36 +53,15 @@ export default function Hero() {
         </a>
       </div>
 
-      <div
-        className="animate-fade-in-up delay-500"
-        style={{
-          display: "flex",
-          gap: 24,
-          marginTop: 64,
-          paddingTop: 32,
-          borderTop: "1px solid var(--border)",
-        }}
-      >
+      <div className="hero-stats animate-fade-in-up delay-500">
         {[
           { value: "3+", label: "APIs em produção" },
           { value: "2+", label: "anos estudando backend" },
           { value: "USP", label: "Ciências da Informação" },
         ].map((stat) => (
           <div key={stat.label}>
-            <div
-              style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: 28,
-                fontWeight: 700,
-                color: "var(--text-primary)",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              {stat.value}
-            </div>
-            <div style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 2 }}>
-              {stat.label}
-            </div>
+            <div className="hero-stat-value">{stat.value}</div>
+            <div className="hero-stat-label">{stat.label}</div>
           </div>
         ))}
       </div>
