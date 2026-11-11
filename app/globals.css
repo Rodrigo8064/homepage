@@ -175,6 +175,24 @@ body::after {
   border-color: rgba(234, 88, 12, 0.2);
 }
 
+.tag-typer {
+  background: rgba(234, 88, 12, 0.1);
+  color: #f97316;
+  border-color: rgba(234, 88, 12, 0.2);
+}
+
+.tag-poetry {
+  background: rgba(168, 162, 158, 0.1);
+  color: #d6d3d1;
+  border-color: rgba(168, 162, 158, 0.2);
+}
+
+.tag-pypi {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);

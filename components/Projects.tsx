@@ -52,6 +52,26 @@ const projects = [
     docsPath: "https://backoffice.rodrigoolima.com.br/api/docs",
     color: "#f59e0b",
   },
+  {
+    id: "lunar",
+    name: "Lunar CLI",
+    description:
+      "CLI para iniciar projetos Python: cria a estrutura inicial com Poetry, instala FastAPI e dependências de desenvolvimento, e traz atalhos e dicas de terminal Linux.",
+    tech: ["Python", "Typer", "Poetry", "PyPI"],
+    tags: ["tag-python", "tag-typer", "tag-poetry", "tag-pypi"],
+    endpoints: [
+      { method: "$", path: "pipx install lunar-toolkit-cli" },
+      { method: "$", path: "lunar new api projeto" },
+      { method: "$", path: "lunar new api --fastapi" },
+      { method: "$", path: "lunar new api --dev" },
+      { method: "$", path: "lunar linux-tips texto" },
+    ],
+    githubUrl: "https://github.com/Rodrigo8064/ln-cli",
+    docsPath: "https://pypi.org/project/lunar-toolkit-cli/",
+    color: "#ea580c",
+    badge: "PYPI",
+    primaryLabel: "Ver no PyPI",
+  },
 ];
 
 const methodColors: Record<string, string> = {
@@ -59,6 +79,7 @@ const methodColors: Record<string, string> = {
   POST: "method-post",
   PUT: "method-put",
   DELETE: "method-delete",
+  $: "method-get",
 };
 
 export default function Projects() {
@@ -87,7 +108,7 @@ export default function Projects() {
             lineHeight: 1.15,
           }}
         >
-          APIs em <span style={{ color: "var(--accent)" }}>produção</span>
+          Projetos <span style={{ color: "var(--accent)" }}>publicados</span>
         </h2>
         <span
           style={{
@@ -157,7 +178,7 @@ export default function Projects() {
                       border: "1px solid rgba(62,207,142,0.2)",
                     }}
                   >
-                    LIVE
+                    {project.badge ?? "LIVE"}
                   </span>
                 </div>
 
@@ -228,7 +249,7 @@ export default function Projects() {
                   className="btn-primary"
                   style={{ justifyContent: "center", fontSize: 13 }}
                 >
-                  Testar API
+                  {project.primaryLabel ?? "Testar API"}
                   <svg
                     width="12"
                     height="12"
